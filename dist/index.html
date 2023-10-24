@@ -4,11 +4,36 @@
         <meta charset="utf-8">
         <title>Badila's ToDo List</title>
         <link rel="icon" href="https://fav.farm/✅" />
-        <script src="main.js"></script>
+        <script src="main.js" defer></script>
     </head>
     <body>
         <div id="main-container">
-            
+            <div id="menu">
+                <div class="projects-heading">Projects</div>
+                <hr>
+                <div class="first-project">First Project</div>
+                <div class="second-project">Second Project</div>
+                <div class="add-project" data-open-modal><span class="plus-icon">+&nbsp;</span>Add project</div>
+                <div class="modal-container">
+                    <dialog class="modal-one">
+                        <form method="dialog" class="form-one">
+                            <div class="field-div project-name-container">
+                                <label for="project-name">Name</label>
+                                <input type="text" id="project-name" name="project-name" placeholder="Your project's name" required>
+                            </div>
+                            <div class="field-div project-description-container">
+                                <label for="project-description">Description</label>
+                                <input type="text" id="project-description" name="project-description" placeholder="What's this about? (optional)">
+                            </div>
+                            <div class="field-div project-buttons-container">
+                                <p class="create-project">Add project</p>
+                                <p class="cancel-project">Cancel</p>
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+            </div>
+            <div id="content"></div>
         </div>
     </body>
 </html>

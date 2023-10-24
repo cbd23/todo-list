@@ -1,3 +1,187 @@
 * {
-    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%; 
+    overflow: hidden;
+}
+
+#main-container {
+    height: 100vh;
+    display: flex;
+}
+
+#menu {
+    background-color: #373c3f;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    background-color: #2f3437;
+    flex: 3;
+}
+
+.projects-heading {
+    background-color: #373c3f;
+    color: whitesmoke;
+
+    border-radius: 8px;
+    margin: 20px 14px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: 700;
+
+    max-height: 50px;
+    flex: 1;
+}
+
+hr {
+    width: 85%;
+    align-self: center;
+}
+
+.first-project,
+.second-project {
+    background-color: #373c3f;
+    color: whitesmoke;
+
+    border-radius: 8px;
+    margin: 4px 14px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+
+    max-height: 50px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.first-project:active,
+.second-project:active {
+    background-color: #444a4d;
+}
+
+.first-project:hover,
+.second-project:hover {
+    background-color: #444a4d;
+}
+
+.add-project {
+    max-height: 50px;
+    border-radius: 8px;
+    margin: 20px 14px 20px auto;
+    padding: 10px 20px;
+
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    cursor: pointer;
+}
+
+.plus-icon {
+    color: #ff2c4b;
+    font-size: 1.2rem;
+}
+
+.add-project:hover {
+    background-color: #444a4d;
+}
+
+.modal-one {
+    border: none;
+    background-color: #3f4447;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px whitesmoke;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+
+    width: 800px;
+    height: 500px;
+    padding: 50px;
+}
+
+.form-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 40px;
+}
+
+.project-name-container,
+.project-description-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+input {
+    flex: 1;
+}
+
+label {
+    background-color: #3f4447;
+
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #d9dada;
+}
+
+input[type='text'] {
+    all: unset;
+    background-color: hsl(200deg 6.21% 28.43%);
+
+    padding-left: 10px;
+    border-radius: 8px;
+    height: 3rem;
+    font-size: 2rem;
+    color: #757575;
+}
+
+.project-buttons-container {
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+p.create-project,
+p.cancel-project {
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+
+    padding: 16px 20px;
+    min-width: fit-content;
+
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+p.create-project {
+    background-color: #00cd00;
+}
+
+p.cancel-project {
+    background-color: #ff2c4b;
 }
