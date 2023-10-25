@@ -251,6 +251,11 @@ p.cancel-project {
     cursor: pointer;
 }
 
+.selected-project-edit-icon:hover {
+    transform: scale(1.5);
+    transition: .1s;
+}
+
 .selected-project-todos {
     /* border: 1px solid whitesmoke; */
     padding: 14px;
@@ -310,6 +315,11 @@ p.cancel-project {
     background-repeat: no-repeat;
 }
 
+.todo-edit-icon:hover {
+    transform: scale(1.5);
+    transition: .1s;
+}
+
 .todo-delete-icon {
     flex: 1;
     height: 25px;
@@ -318,6 +328,11 @@ p.cancel-project {
     background-position: 50% 50%;
     background-size: 25px;
     background-repeat: no-repeat;
+}
+
+.todo-delete-icon:hover {
+    transform: scale(1.5);
+    transition: .1s;
 }
 
 .checked {
