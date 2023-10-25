@@ -23,11 +23,6 @@ html, body {
     flex-direction: column;
 }
 
-#content {
-    background-color: #2f3437;
-    flex: 3;
-}
-
 .projects-heading {
     background-color: #373c3f;
     color: whitesmoke;
@@ -43,7 +38,7 @@ html, body {
 }
 
 hr {
-    width: 85%;
+    width: 90%;
     align-self: center;
 }
 
@@ -60,11 +55,6 @@ hr {
     max-height: 50px;
     flex: 1;
     cursor: pointer;
-}
-
-.first-project:active,
-.second-project:active {
-    background-color: #444a4d;
 }
 
 .first-project:hover,
@@ -183,5 +173,258 @@ p.create-project {
 }
 
 p.cancel-project {
+    background-color: #ff2c4b;
+}
+
+#content {
+    background-color: #2f3437;
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-project-container {
+    display: flex;
+    flex-direction: row;
+
+    max-height: fit-content;
+    padding: 14px;
+    flex: 1;
+
+}
+.selected-project-leftside {
+    flex: 10
+}
+
+.selected-project-name {
+    background-color: #2f3437;
+
+    border-radius: 8px;
+    margin: 4px 14px;
+    padding: 6px 0px;
+
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #d9dada;
+}
+
+.selected-project-description {
+    background-color: #2f3437;
+    color: whitesmoke;
+
+    border-radius: 8px;
+    margin: 4px 14px;
+    padding: 10px 0px;
+    font-size: 1.3rem;
+
+    max-height: 50px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.selected-project-rightside {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    flex: 1
+}
+
+.selected-project-edit-text {    
+    color: whitesmoke;
+    font-size: 1rem;
+    height: fit-content;
+    flex: 1;
+    cursor: pointer;
+    margin-right: -26px;
+}
+
+.selected-project-edit-icon {
+    flex: 1;
+    height: 50px;
+
+    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/pen.f143f2542420df9040ba2f60576c01b4.svg);
+    background-position: 50% 50%;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.selected-project-todos {
+    /* border: 1px solid whitesmoke; */
+    padding: 14px;
+    flex: 8;
+}
+
+.todo-container {
+    border: 1px solid hsla(0,0%,100%,.4);
+
+    background-color: #2f3437;
+    color: whitesmoke;
+
+    border-radius: 8px;
+    margin: 14px;
+    padding: 20px;
+    gap: 10px;
+    font-size: 1.3rem;
+
+    max-height: 50px;
+    flex: 1;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.todo-checkbox {
+    width: 25px;
+    height: 25px;
+    border: 1px solid hsla(0,0%,100%,.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.todo-name {
+    flex: 10;
+    width: 90%;
+    height: 25px;
+    padding: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.todo-due-date {
+    width: fit-content;
+    flex: 1;
+}
+
+.todo-edit-icon {
+    flex: 1;
+    height: 25px;
+
+    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/pen.f143f2542420df9040ba2f60576c01b4.svg);
+    background-position: 50% 50%;
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.todo-delete-icon {
+    flex: 1;
+    height: 25px;
+
+    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/icons8-trash-1-dark.912351d015e21b5e38469d33950ebd1b.svg);
+    background-position: 50% 50%;
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.checked {
+    background-color: #7af76e;
+    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/tick.b899c6a3b2f518f6f26913e0336a903a.svg);
+    background-position: 50% 50%;
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+.add-task {    
+    max-width: fit-content;
+    max-height: 50px;
+    border-radius: 8px;
+    margin: 20px 14px 20px auto;
+    padding: 10px 20px;
+
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    cursor: pointer;
+}
+
+.add-task:hover {
+    background-color: #444a4d;
+}
+
+.modal-two {
+    border: none;
+    background-color: #3f4447;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px whitesmoke;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+
+    width: 800px;
+    height: 500px;
+    padding: 50px;
+}
+
+.form-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 40px;
+}
+
+.todo-name-container,
+.todo-description-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='date'] {
+    all: unset;
+    background-color: hsl(200deg 6.21% 28.43%);
+
+    padding: 10px;
+    border-radius: 8px;
+
+    width: fit-content;
+    height: 3rem;
+
+    font-size: 2rem;
+    color: #757575;
+    align-items: center;
+}
+
+.todo-buttons-container {
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+p.create-todo,
+p.cancel-todo {
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+
+    padding: 16px 20px;
+    min-width: fit-content;
+
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+p.create-todo {
+    background-color: #00cd00;
+}
+
+p.cancel-todo {
     background-color: #ff2c4b;
 }
