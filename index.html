@@ -17,15 +17,15 @@
                 <div class="modal-container">
                     <dialog class="modal-one">
                         <form method="dialog" class="form-one">
-                            <div class="field-div project-name-container">
+                            <div class="project-name-container">
                                 <label for="project-name">Name</label>
                                 <input type="text" id="project-name" name="project-name" placeholder="Your project's name" required>
                             </div>
-                            <div class="field-div project-description-container">
+                            <div class="project-description-container">
                                 <label for="project-description">Description</label>
                                 <input type="text" id="project-description" name="project-description" placeholder="What's this about? (optional)">
                             </div>
-                            <div class="field-div project-buttons-container">
+                            <div class="project-buttons-container">
                                 <p class="create-project">Add project</p>
                                 <p class="cancel-project">Cancel</p>
                             </div>
@@ -33,7 +33,47 @@
                     </dialog>
                 </div>
             </div>
-            <div id="content"></div>
+            <div id="content">
+                <div class="selected-project-container">
+                    <div class="selected-project-leftside">
+                        <div class="selected-project-name">Project Rock</div>
+                        <div class="selected-project-description">Blood, Sweat and Respect</div>
+                    </div>
+                    <div class="selected-project-rightside">
+                        <div class="selected-project-edit-text">Edit</div>
+                        <div class="selected-project-edit-icon"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="selected-project-todos">
+                    <div class="todo-container">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-name">This could be a todo</div>
+                        <div class="todo-due-date">2 weeks</div>
+                        <div class="todo-edit-icon"></div>
+                        <div class="todo-delete-icon"></div>
+                    </div>
+                    <div class="add-task" data-open-modal><span class="plus-icon">+&nbsp;</span>Add task</div>
+                </div>
+                <div class="modal-container">
+                    <dialog class="modal-two">
+                        <form method="dialog" class="form-two">
+                            <div class="todo-name-container">
+                                <label for="todo-name">Name</label>
+                                <input type="text" id="todo-name" name="todo-name" placeholder="Buy coffee" required>
+                            </div>
+                            <div class="todo-description-container">
+                                <label for="todo-due-date">Due date</label>
+                                <input type="date" id="todo-due-date" name="todo-due-date" placeholder="What's this about? (optional)">
+                            </div>
+                            <div class="todo-buttons-container">
+                                <p class="create-todo">Add project</p>
+                                <p class="cancel-todo">Cancel</p>
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+            </div>
         </div>
     </body>
 </html>
