@@ -42,8 +42,12 @@ hr {
     align-self: center;
 }
 
-.first-project,
-.second-project {
+.project-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.project-list-item-name {
     background-color: #373c3f;
     color: whitesmoke;
 
@@ -53,13 +57,29 @@ hr {
     font-size: 1.3rem;
 
     max-height: 50px;
-    flex: 1;
+    flex: 3;
     cursor: pointer;
 }
 
-.first-project:hover,
-.second-project:hover {
+.project-list-item-name:hover {
     background-color: #444a4d;
+}
+
+.project-list-item-delete {
+    flex: 1;
+    height: 25px;
+
+    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/icons8-trash-1-dark.912351d015e21b5e38469d33950ebd1b.svg);
+    background-position: 50% 50%;
+    background-size: 25px;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+.project-list-item-delete:hover {
+    transform: scale(1.5);
+    transition: .1s;
 }
 
 .add-project {
