@@ -173,7 +173,7 @@ input[type='text'] {
     gap: 30px;
 }
 
-p.create-project,
+button.create-project,
 p.cancel-project {
     border-radius: 8px;
     font-size: 1.5rem;
@@ -188,8 +188,9 @@ p.cancel-project {
     cursor: pointer;
 }
 
-p.create-project {
+button.create-project {
     background-color: #00cd00;
+    border: none;
 }
 
 p.cancel-project {
