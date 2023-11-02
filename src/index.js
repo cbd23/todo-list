@@ -6,27 +6,85 @@ import { Todo } from './modules/class-todo';
 // use an array to store all the projects displayed on the menu
 let projectsListArr = [];
 
-let projectName = document.getElementById('project-name');
-let projectDescription = document.getElementById('project-description');
-
+// store the container that we'll append the projects to in a let
+let projectsList = document.querySelector('.projects-list');
 
 // store the form-one in a let
 let formOne = document.querySelector('.form-one');
 // store the modal-one in a let
 let modalOne = document.querySelector('.modal-one');
 
-// event listener for the '+ Add project' btn that opens modal one
+// store each input field from form-one in a let
+let projectName = document.getElementById('project-name');
+let projectDescription = document.getElementById('project-description');
+
+// event listener for the '+ Add project' btn that OPENS modal one
 const addProject = document.querySelector('.add-project');
 addProject.addEventListener('pointerdown', () => {
     modalOne.showModal();
 });
 
-// event listener for the 'Add project' btn that submits the form inside modal one
-let createProjectBtn = document.querySelector('.create-project');
-createProjectBtn.addEventListener('pointerdown', () => {
-    console.log('createProjectBtn was pressed');
-    createProject();
+// create a fn pushes each project obj to the array
+function addProjectToList(project) {
+    projectsListArr.push(project);
+};
+
+// add the 'default project', so we'll see an example before interacting with the app
+let projectExample = {
+    name: 'Default project',
+    description: 'Short description about it.',
+    todoList: ['do this', 'buy that', 'call sis', 'text Matt'],
+};
+addProjectToList(projectExample);
+renderProjects();
+
+// create a new obj using 'class Project' & call addProjectToList()
+formOne.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let project = new Project(projectName.value, projectDescription.value, []);
+
+    addProjectToList(project);
+    console.log(project);
+    console.log(projectsListArr);
+
+    renderProjects();
+
+    // reset the input fields & close the modal
+    projectName.value = '';
+    projectDescription.value = '';
+    formOne.reset();
+    modalOne.close();
 });
+
+function renderProjects() {
+    projectsList.innerHTML = '';
+
+    projectsListArr.forEach((project, index) => {
+
+        // create project list elements and add them to the DOM
+        let projectListItem = document.createElement('div');
+        projectListItem.classList.add('project-list-item');
+
+        let projectListItemName = document.createElement('div');
+        projectListItemName.classList.add('project-list-item-name');
+        projectListItemName.innerText = project.name;
+
+        let projectListItemDelete = document.createElement('div');
+        projectListItemDelete.classList.add('project-list-item-delete');
+        projectListItemDelete.id = index;
+
+        projectListItem.appendChild(projectListItemName);
+        projectListItem.appendChild(projectListItemDelete);
+        projectsList.appendChild(projectListItem);
+
+        // event listener for every 'REMOVE' button in the menu
+        projectListItemDelete.addEventListener('pointerdown', () => {
+            projectsListArr.splice(projectListItemDelete.id, 1);
+            renderProjects(); // refresh the project list
+        });
+    });
+};
 
 // cancel modal one & reset the form
 const cancelProject = document.querySelector('.cancel-project');
@@ -35,9 +93,9 @@ cancelProject.addEventListener('pointerdown', () => {
     formOne.reset();
 });
 
-
 // store the form-two in a let
 let formTwo = document.querySelector('.form-two');
+
 //store the modal-two in a let
 let modalTwo = document.querySelector('.modal-two');
 
@@ -54,68 +112,8 @@ cancelTodo.addEventListener('pointerdown', () => {
     formTwo.reset();
 });
 
-// this fn creates the projects 
-// (it pushes each obj to the array and appends the needed elements to the DOM)
-// it is called everytime the form one is submitted
-function createProject() {
-    let project = new Project(projectName.value, projectDescription.value, []);
-    projectsListArr.push(project);
-
-    // append elements needed to the DOM
-    let projectsList = document.querySelector('.projects-list');
-
-    let proejctListItem = document.createElement('div');
-    proejctListItem.classList.add('project-list-item');
-
-    let projectListItemName = document.createElement('div');
-    projectListItemName.classList.add('project-list-item-name');
-    projectListItemName.innerText = projectName.value;
-
-    let projectListItemDelete = document.createElement('div');
-    projectListItemDelete.classList.add('project-list-item-delete');
-
-    // each time a new project is created, the 'REMOVE PROJECT btn' gets an id 
-    // equal to the project's index number in the projectsListArr
-    projectListItemDelete.id = projectsListArr.indexOf(project);
-
-    proejctListItem.appendChild(projectListItemName);
-    proejctListItem.appendChild(projectListItemDelete);
-    projectsList.appendChild(proejctListItem);
-
-    console.log(projectsListArr);
-    console.log(project);
-
-    modalOne.close();
-    formOne.reset();
-
-    // event listener for every 'REMOVE' btn from the menu
-    // it removes an object from the array that stores all projects & calls removeParent()
-    projectListItemDelete.addEventListener('pointerdown', () => {
-        projectsListArr.splice(projectListItemDelete.id, 1);
-
-        projectListItemDelete.id = 'badChild';
-
-        removeParent();
-    });
-};
-
-// this fn removes the div that displays the project's name on the menu from the DOM
-function removeParent() {
-    const badChild = document.getElementById('badChild');
-
-    if (badChild) {
-        const badParentElement = badChild.parentNode;
-        badParentElement.remove();
-    }
-};
-
-// each time a div Project is pressed, append the right elements to the DOM
-
-
-
-
-
-
+// each time a div Project is pressed, append the right elements to the DOM #############################################################################################################
+// SOON TO BE DEVELOPED
 
 
 // date picker default
