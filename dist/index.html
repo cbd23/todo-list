@@ -12,10 +12,6 @@
                 <div class="projects-heading">Projects</div>
                 <hr>
                 <div class="projects-list">
-                    <div class="project-list-item">
-                        <div class="project-list-item-name">First Project</div>
-                        <div class="project-list-item-delete"></div>
-                    </div>
                 </div>
                 <div class="add-project" data-open-modal><span class="plus-icon">+&nbsp;</span>Add project</div>
                 <div class="modal-container">
@@ -23,14 +19,14 @@
                         <form method="dialog" class="form-one">
                             <div class="project-name-container">
                                 <label for="project-name">Name</label>
-                                <input type="text" id="project-name" name="project-name" placeholder="Your project's name" required>
+                                <input type="text" id="project-name" name="project-name" placeholder="Your project's name" minlength="3" maxlength="25" required>
                             </div>
                             <div class="project-description-container">
                                 <label for="project-description">Description</label>
-                                <input type="text" id="project-description" name="project-description" placeholder="What's this about? (optional)">
+                                <input type="text" id="project-description" name="project-description" placeholder="What's this about? (optional)" maxlength="70">
                             </div>
                             <div class="project-buttons-container">
-                                <p class="create-project">Add project</p>
+                                <button type="submit" class="create-project">Add project</button>
                                 <p class="cancel-project">Cancel</p>
                             </div>
                         </form>
