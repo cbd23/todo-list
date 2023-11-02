@@ -442,7 +442,7 @@ input[type='date'] {
     gap: 30px;
 }
 
-p.create-todo,
+button.create-todo,
 p.cancel-todo {
     border-radius: 8px;
     font-size: 1.5rem;
@@ -457,8 +457,9 @@ p.cancel-todo {
     cursor: pointer;
 }
 
-p.create-todo {
+button.create-todo {
     background-color: #00cd00;
+    border: none;
 }
 
 p.cancel-todo {
