@@ -1,6 +1,6 @@
  // class Todo creates todo objects
  
- export class ToDo {
+ export class Todo {
     constructor(name, dueDate) {
         this.name = name;
         this.dueDate = dueDate;
