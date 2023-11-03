@@ -323,7 +323,7 @@ p.cancel-project {
 
 .todo-due-date {
     width: fit-content;
-    flex: 1;
+    flex: 2;
 }
 
 .todo-edit-icon {
