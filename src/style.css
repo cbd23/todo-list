@@ -69,7 +69,7 @@ hr {
     flex: 1;
     height: 25px;
 
-    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/icons8-trash-1-dark.912351d015e21b5e38469d33950ebd1b.svg);
+    background-image: url(https://raw.githubusercontent.com/cbd23/todo-list/32ab4136d15acc59e0870e2378e0c0ea4cbea826/src/icons/delete-icon.svg);
     background-position: 50% 50%;
     background-size: 25px;
     background-repeat: no-repeat;
@@ -265,7 +265,7 @@ p.cancel-project {
     flex: 1;
     height: 50px;
 
-    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/pen.f143f2542420df9040ba2f60576c01b4.svg);
+    background-image: url(https://raw.githubusercontent.com/cbd23/todo-list/c5aa3e58f31f8fc91ad59c0e0fcefb8922aa2178/src/icons/edit-icon.svg);
     background-position: 50% 50%;
     background-size: 15px;
     background-repeat: no-repeat;
@@ -330,7 +330,7 @@ p.cancel-project {
     flex: 1;
     height: 25px;
 
-    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/pen.f143f2542420df9040ba2f60576c01b4.svg);
+    background-image: url(https://raw.githubusercontent.com/cbd23/todo-list/c5aa3e58f31f8fc91ad59c0e0fcefb8922aa2178/src/icons/edit-icon.svg);
     background-position: 50% 50%;
     background-size: 15px;
     background-repeat: no-repeat;
@@ -345,7 +345,7 @@ p.cancel-project {
     flex: 1;
     height: 25px;
 
-    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/icons8-trash-1-dark.912351d015e21b5e38469d33950ebd1b.svg);
+    background-image: url(https://raw.githubusercontent.com/cbd23/todo-list/32ab4136d15acc59e0870e2378e0c0ea4cbea826/src/icons/delete-icon.svg);
     background-position: 50% 50%;
     background-size: 25px;
     background-repeat: no-repeat;
@@ -358,7 +358,7 @@ p.cancel-project {
 
 .checked {
     background-color: #7af76e;
-    background-image: url(https://pret3nti0u5.github.io/To-Do-List/imgs/tick.b899c6a3b2f518f6f26913e0336a903a.svg);
+    background-image: url(https://raw.githubusercontent.com/cbd23/todo-list/c5aa3e58f31f8fc91ad59c0e0fcefb8922aa2178/src/icons/tick-icon.svg);
     background-position: 50% 50%;
     background-size: 15px;
     background-repeat: no-repeat;
